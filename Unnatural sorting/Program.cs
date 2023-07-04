@@ -1,4 +1,4 @@
-﻿List<int> listOfNumbersRandom = new();
+List<int> listOfNumbersRandom = new();
 Random numbersRandom= new Random();
 
 for(int i = 0; i < 1001; i++)
@@ -12,9 +12,15 @@ foreach (int numbers in listOfNumbersRandom)
     Console.WriteLine(numbers);
 }
 
+Console.WriteLine("----------------------------------------");
+
 List<int> listOrdered= listOfNumbersRandom.OrderBy(x => x.ToString().Length).ToList();
 
-listOrdered.ForEach(Console.WriteLine);
+Console.WriteLine("sto stampando i dati per lunghezza di caratteri:");
+foreach (int x in listOrdered)
+{
+    Console.WriteLine(x);
+}
 
 
 
